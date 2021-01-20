@@ -1,5 +1,5 @@
-## OpenCore 0.6.4 z390, 9700k, Vega 64 Hackintosh
-The build at a high-level: Gigabyte z390 pro, i9 9700k, Vega 64, 32gb 3200mhz, 970 plus NVMe
+## Hackintosh: [OpenCore] {Big Sur} Gigabyte Z390 Aorus Pro, i9 9700k, Vega 64, 32gb 3200mhz, WD SN850
+The build at a high-level: Gigabyte Z390 Aorus Pro, i9 9700k, Vega 64, 32gb 3200mhz, WD SN850 NVMe
 
 _________________________________
 
@@ -10,23 +10,23 @@ Hardware Specifics for this build:
 [Motherboard][Gigabyte Z390 AORUS PRO WIFI ATX LGA1151 Motherboard]
 [Memory][Corsair Vengeance LPX 32 GB (2 x 16 GB) DDR4-3200 CL16 Memory]
 [Storage][Samsung 860 Evo 500 GB 2.5" Solid State Drive]
-[Storage][Samsung 970 Evo Plus 1 TB M.2-2280 NVME Solid State Drive]
-[Storage][Samsung 970 Evo Plus 1 TB M.2-2280 NVME Solid State Drive] [Windows dedicated]
+[Storage][Western Digitial SN850 1 TB NVME] {OSX: Big Sur} 
+[Storage][Samsung 970 Evo Plus 1 TB M.2-2280 NVME Solid State Drive] {Windows dedicated}
 [Video Card][Sapphire Radeon RX VEGA 64 8 GB Video Card]
 [Case][NZXT H510i ATX Mid Tower Case]
 [Power Supply][EVGA G3 750 W 80+ Gold Certified Fully Modular ATX Power Supply]
 [Wireless Network Adapter][ASUS AC68 ac1900]
 [Monitor][Samsung 890 LC34H890WGNXGO 34.0" 3440x1440 100 Hz Monitor]
-[Custom][Gigabyte GC-Titan Ridge]
+[Custom][Gigabyte GC-Titan Ridge Thunderbolt Controller]
 ```
 _________________________________
 
-I have had Clover 5122 running Catalina stable for over a year now, but decided to give OpenCore 0.6.4 a go with BigSur.
+I have had Clover 5122 running Catalina stable for over a year now, but decided to give OpenCore a go with the BigSur update to OSX.
 
 ## Status
-I'm not a seasoned expert on this sort of thing, but I followed the Dortania guide– manually created my own SSDTs, etc. and a this point have a solid OSX 11.1 running off of OpenCore 0.6.4 with iservices, sound (via Titan-ridge to Clarett2Pre thunderbolt controller), FileVault, etc all working.
+I'm not a an expert here, but most of the time can stumble my way through things. Strickly following the Dortania guide– manually creating my own SSDTs, USB Mapping, etc, etc and finally at this point I have OSX 11.1 running pretty solid with OpenCore 0.6.5. iServices, sound (via Titan-ridge to Clarett2Pre thunderbolt controller), etc all working great. Waking from sleep seemed to give me some issues initially– after re-USB-mapping it seems to be okay now.
 
-I hope this repo serves to help others in the future.
+I hope this repo serves to help others in the future– for myself, the Z390 Pro fought me a lot in the beginning, so hopefully this helps surface some answers and/or save you some time.
 
 _________________________________
 
@@ -39,4 +39,10 @@ X.M.P. Profile = 1
 ## GC-Titan Ridge Thunderbolt Contoller
 Getting Titan Ridge to work initially was a pain on my older Clover/Catalina installation, but it helped sort some kinks. After following the proper installation and recommended bios options there was a key setting in the bios for enabling power to the card on boot– I can't remember what it is called exactly, but it is in the thunderbolt specific configuration settings. 
 
-From there, strange as it sounds, I had to actually boot into Windows to initialize the card before it would work in OSX. If others ares struggling like I was– try this.
+From there, strange as it sounds, you actually have to boot into Windows to initialize the card before it would work in OSX. It has to do a power-saving feature in the controller. There is/are some ACPI work arounds that I didn't mess with. If others ares struggling like I was– try this. Further reading on this subject here: https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix/ 
+
+## Misc
+Another noteworthy mention. Originally I had two Samsung 970 Evo Plus 1 TB NVME drives installed on this machine– one for Windows, one for OSX. I had issues getting OSX to boot with the dual boot setup/nature of this configuration. They were both updated to the latest firmware (as I'm told that is a critical piece to gettin those drives to work), but I still couldn't get it to play nicely and boot. I was able to install Big Sur, but upon reboot couldn't reach the desktop. I used it as an excuse to try a different drive and the newer/faster Western Digital SN850 1tb which worked right away without any issues. I'm still not sure what the deal there was as I've seen others online using the 970 Evo Plus drives without issue. Either-way– no longer and issue in my case.
+
+## Cheers!
+:)
