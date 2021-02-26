@@ -8,10 +8,12 @@ Hardware Specifics for this build:
 [CPU][Intel Core i7-9700K 3.6 GHz 8-Core Processor]
 [CPU Cooler][Corsair H115i PRO 55.4 CFM Liquid CPU Cooler]
 [Motherboard][Gigabyte Z390 AORUS PRO WIFI ATX LGA1151 Motherboard]
-[Memory][Corsair Vengeance LPX 32 GB (2 x 16 GB) DDR4-3200 CL16 Memory]
+[Memory][Corsair Vengeance LPX 64 GB (4 x 16 GB) DDR4-3200 CL16 Memory]
 [Storage][Western Digitial SN850 1 TB NVME] {OSX: Big Sur} 
 [Storage][Samsung 970 Evo Plus 1 TB M.2-2280 NVME Solid State Drive] {Windows dedicated}
-[Storage][Samsung 860 Evo 500 GB 2.5" Solid State Drive]
+[Storage][Seagate Exos 7E8 8TB 3.5 Inch 6Gb/s 7200 RPM 256 MB Drive]
+[Storage][Seagate Exos 7E8 8TB 3.5 Inch 6Gb/s 7200 RPM 256 MB Drive]
+[Storage][Seagate Exos 7E8 8TB 3.5 Inch 6Gb/s 7200 RPM 256 MB Drive]
 [Storage][Seagate Exos 7E8 8TB 3.5 Inch 6Gb/s 7200 RPM 256 MB Drive]
 [Video Card][Sapphire Radeon RX VEGA 64 8 GB Video Card]
 [Case][NZXT H510i ATX Mid Tower Case]
