@@ -1,5 +1,5 @@
 ## Hackintosh: [OpenCore] {Big Sur} Gigabyte Z390 Aorus Pro, i7 9700k, Vega 64, 32gb 3200mhz, WD SN850
-The build at a high-level: Gigabyte Z390 Aorus Pro, i9 9700k, Vega 64, 32gb 3200mhz, WD SN850 NVMe
+The build at a high-level: Gigabyte Z390 Aorus Pro, i7 9700k, Vega 64, 32gb 3200mhz, WD SN850 NVMe
 
 _________________________________
 
